@@ -31,11 +31,11 @@ export default async function RootLayout({
   const session = await auth()
 
   return (
-    <SessionProvider session={session}>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <SessionProvider session={session}>
          <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -49,9 +49,9 @@ export default async function RootLayout({
     </div>
             </div>
         
-        </ThemeProvider>
+         </ThemeProvider>
+        </SessionProvider>
       </body>
     </html>
-    </SessionProvider>
   );
 }
