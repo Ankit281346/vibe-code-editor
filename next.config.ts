@@ -32,7 +32,10 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  reactStrictMode:false
+  reactStrictMode:false,
+  outputFileTracingIncludes: {
+    '/api/template/[id]': ['./public/vibecode-starters/**/*'],
+  },
 };
 
 export default nextConfig;
